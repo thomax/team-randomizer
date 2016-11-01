@@ -21,23 +21,46 @@
   font-size: large;
 }
 
-table {
-  padding: 10px 10px 10px 10px;
-  margin: 10px 10px 10px 10px;
+.players-table table {
+  padding: 10px 10px 10px 2px;
+  margin: 5px 0px 50px 0px;
   width: 40%;
   min-width: 500px;
 }
 
-th {
+.players-table th {
   color: #888;
   font-size: 80%;
   text-align: left;
-}
-
-td {
   border-right: 1px solid #ddd;
   border-top: 1px solid #ddd;
 }
+
+.players-table td {
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.stats-table table {
+  padding: 0px 10px 10px 2px;
+  margin: 0px 0px 5px 0px;
+  width: 20%;
+  min-width: 250px;
+}
+
+.stats-table th {
+  padding: 3px;
+  background-color: #eee;
+  text-align: left;
+  font-weight: normal;
+}
+
+.stats-table td {
+  padding: 3px;
+  background-color: #eee;
+  text-align: right;
+}
+
 
 
 h1 {

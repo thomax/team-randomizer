@@ -37,21 +37,37 @@ function TeamTable(props) {
   const flatTeam = flattenTeam(team)
 
   return (
-    <table>
-    <thead>
-      <tr>
-        <th>Lag</th>
-        <th>Navn</th>
-        <th>Ferdighet [{average(flatTeam, 'skill')}]</th>
-        <th>Modenhet [{average(flatTeam, 'maturity')}]</th>
-      </tr>
-    </thead>
-    <tbody>
-      {flatTeam.map(player => {
-        return renderPlayer(player, batchIndex)
-      })}
-    </tbody>
-    </table>
+    <div>
+    <table className="stats-table">
+        <tbody>
+          <tr>
+            <th>Spillere</th><td>{flatTeam.length}</td>
+          </tr>
+          <tr>
+            <th>Ferdighet</th><td>{average(flatTeam, 'skill')}</td>
+          </tr>
+          <tr>
+            <th>Modenhet</th><td>{average(flatTeam, 'maturity')}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table className="players-table">
+        <thead>
+          <tr>
+            <th>Lag</th>
+            <th>Navn</th>
+            <th>Ferdighet</th>
+            <th>Modenhet</th>
+          </tr>
+        </thead>
+        <tbody>
+          {flatTeam.map(player => {
+            return renderPlayer(player, batchIndex)
+          })}
+        </tbody>
+      </table>
+    </div>
   )
 }
 
