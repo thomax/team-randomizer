@@ -88,24 +88,15 @@ export default React.createClass({
       return <div>Generating teams...</div>
     }
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Team randomizer</h2>
-        </div>
-        <p className="App-intro">
-          {players.length} spillere
-        </p>
-        <div className="batches">
-          {batches.map((teams, batchIndex) => {
-            return (
-              <div className="batch" key={batchIndex}>
-                <h1>Batch {batchIndex+1}</h1>
-                <TeamsTables teams={teams} batchIndex={batchIndex}/>
-              </div>
-            )
-          })}
-        </div>
+      <div className="batches">
+        {batches.map((teams, batchIndex) => {
+          return (
+            <div key={batchIndex}>
+              <h1>Batch {batchIndex+1}</h1>
+              <TeamsTables teams={teams} batchIndex={batchIndex}/>
+            </div>
+          )
+        })}
       </div>
     )
   }

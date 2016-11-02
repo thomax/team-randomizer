@@ -38,7 +38,7 @@ function TeamTable(props) {
 
   return (
     <div>
-    <table className="stats-table">
+      <table className="stats-table">
         <tbody>
           <tr>
             <th>Spillere</th><td>{flatTeam.length}</td>

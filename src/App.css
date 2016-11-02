@@ -1,24 +1,6 @@
 
-.App {
+body {
   font-family: "Helvetica"
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  text-align: center;
-}
-
-.App-intro {
-  text-align: center;
-  font-size: large;
 }
 
 .players-table table {
@@ -33,19 +15,18 @@
   font-size: 80%;
   text-align: left;
   border-right: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .players-table td {
   border-right: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .stats-table table {
   padding: 0px 10px 10px 2px;
   margin: 0px 0px 5px 0px;
-  width: 20%;
-  min-width: 250px;
+  width: 400px;
 }
 
 .stats-table th {
@@ -64,15 +45,14 @@
 
 
 h1 {
-  background-color: #ddd;
+  background-color: #6e9be5;
+  padding: 2px 0px 0px 17px;
 }
 
-.batches {
+.batch-wrapper {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-gap: 10px;
+  page-break-after: always;
   padding: 0px 20px 0px 20px;
-}
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

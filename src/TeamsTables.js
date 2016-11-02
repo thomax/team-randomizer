@@ -10,10 +10,10 @@ export default class TeamsTables extends React.Component {
   render() {
     const {teams, batchIndex} = this.props
     return (
-      <div>
+      <div className="batch-wrapper">
         {teams.map((team, teamIndex) => {
           return (
-            <div key={`${batchIndex}-${teamIndex}`}>
+            <div key={`${batchIndex}-${teamIndex}`} className="team-wrapper">
               <h2>Lag {teamIndex+1}</h2>
               <TeamTable team={team} batchIndex={batchIndex}/>
             </div>
